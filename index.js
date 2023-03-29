@@ -1,9 +1,9 @@
 const fs = require("fs");
 const express = require("express");
 const app = express();
-const PORT = 4000;
+const PORT = 5000;
 
-//server link ---> http://localhost:4000/
+//server link ---> http://localhost:5000/
 
 let title = () => {
   var timestamp = new Date().toISOString();
@@ -32,4 +32,6 @@ app.get("/", function (request, response) {
   response.send(`Current Date and Time ${body}`);
 });
 
-app.listen(PORT, () => console.log(`The server started in: ${PORT} ✨✨`));
+app.listen(PORT, () =>
+  console.log(`The server started in ${PORT} successfully`)
+);
